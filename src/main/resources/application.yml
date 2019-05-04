@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dbgirl?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update # create 创建表 如果存在就删除, update 表里有数据的话，不会删除原来的数据
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
